@@ -1,4 +1,4 @@
-export class JokeController {
+export default class JokeController {
   
   constructor(jokesUrl){
     this.jokesUrl = jokesUrl;

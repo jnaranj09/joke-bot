@@ -2,7 +2,7 @@ import { UIController } from './ui-controller.js';
 
 import { UserMessage, BotMessage } from './message.js';
 
-import { JokeController } from './joke-controller.js';
+import Joker from './joke-controller.js';
 
 async function tellAJoke() {
   ui.disableButton(ui.jokeButton, true);
@@ -27,6 +27,6 @@ async function tellAJoke() {
 }
 
 const ui = new UIController();
-const comedian = new JokeController("https://official-joke-api.appspot.com/jokes/random");
+const comedian = new Joker("https://official-joke-api.appspot.com/jokes/random");
 ui.addClickHandler(ui.jokeButton, tellAJoke);
 ui.addClickHandler(ui.reloadButton, ui.reload);
